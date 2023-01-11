@@ -186,7 +186,7 @@ class CpqDetailViewController: CashdocViewController {
     }
     private let errorImageView = UIImageView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(named: "imgPresentError")
+        $0.image = UIImage(named: "imgDpointhboxNone02")
         
     }
     private let errorLabel = UILabel().then {

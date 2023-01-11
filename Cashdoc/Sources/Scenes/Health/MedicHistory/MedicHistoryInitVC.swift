@@ -103,13 +103,13 @@ final class MedicHistoryInitVC: CashdocViewController {
             self.contentView.backgroundColor = UIColor.fromRGB(229, 253, 228)
         } else {
             
-            let title = "진료내역 확인하고 500캐시 받아 가세요!"
+            let title = "진료내역 확인하고 500포인트 받아 가세요!"
             let titleAtributedStr = NSMutableAttributedString(string: title,
                                                               attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .regular),
                                                                            .foregroundColor: UIColor.blackCw,
                                                                            .kern: 0.0])
             titleAtributedStr.addAttribute(.paragraphStyle, value: paragraph, range: NSRange(location: 0, length: titleAtributedStr.length))
-            let range = (titleAtributedStr.string as NSString).range(of: "500캐시")
+            let range = (titleAtributedStr.string as NSString).range(of: "500포인트")
             
             titleAtributedStr.addAttributes([.font: UIFont.systemFont(ofSize: 14, weight: .bold), .foregroundColor: UIColor.blackCw], range: range)
             self.contentLabel.attributedText = titleAtributedStr

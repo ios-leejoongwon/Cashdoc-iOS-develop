@@ -54,7 +54,7 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCheck3DColor" highlightedImage="icCashColor" translatesAutoresizingMaskIntoConstraints="NO" id="aLo-Z7-YPO">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCheck3DColor" highlightedImage="icDpoint3DColor2" translatesAutoresizingMaskIntoConstraints="NO" id="aLo-Z7-YPO">
                                                         <rect key="frame" x="314" y="8" width="28" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="28" id="1VV-nx-5tc"/>
@@ -249,7 +249,7 @@
                                                                 </constraints>
                                                                 <attributedString key="attributedText">
                                                                     <fragment>
-                                                                        <string key="content">- 건강검진 결과를 처음 조회한 회원에게만 최초 1회에 한하여 캐시 적립 혜택을 제공하고 있습니다. - 과거에 건강검진조회 서비스를 이용한 회원의 경우 혜택이 적용되지 않습니다. - 본 혜택은 당사의 사정에 의해 고지 없이 변경 혹은 중단될 수 있습니다.</string>
+                                                                        <string key="content">- 건강검진 결과를 처음 조회한 회원에게만 최초 1회에 한하여 포인트 적립 혜택을 제공하고 있습니다. - 과거에 건강검진조회 서비스를 이용한 회원의 경우 혜택이 적용되지 않습니다. - 본 혜택은 당사의 사정에 의해 고지 없이 변경 혹은 중단될 수 있습니다.</string>
                                                                         <attributes>
                                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                             <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
@@ -372,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gs3-Hq-Eju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71.200000000000003" y="117.39130434782609"/>
+            <point key="canvasLocation" x="-72.307692307692307" y="117.29857819905213"/>
         </scene>
         <!--Checkup ResultVC-->
         <scene sceneID="Ssf-AL-b1R">
@@ -1188,8 +1188,8 @@
         <image name="icArrow01StyleRightWeb02" width="24" height="24"/>
         <image name="icArrow01StyleRightWhite" width="14" height="14"/>
         <image name="icArrow01StyleUpGray" width="24" height="24"/>
-        <image name="icCashColor" width="24" height="24"/>
         <image name="icCheck3DColor" width="28" height="28"/>
+        <image name="icDpoint3DColor2" width="28" height="28"/>
         <image name="icMedicalBasic" width="20" height="20"/>
         <image name="icMedicalDoctor" width="20" height="20"/>
         <image name="icMedicalFat" width="20" height="20"/>
