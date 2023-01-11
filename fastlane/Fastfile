@@ -1,0 +1,125 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+#update_fastlane
+#fastlane_version "2.9.0"
+
+default_platform :ios
+
+ENV["FASTLANE_PASSWORD"] = "Zotlekr88!"
+ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "cegv-oowv-aybr-hdvk"
+ENV['ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD'] = 'true' 
+
+platform :ios do
+
+  lane :bump_version do
+    build_number = get_build_number(xcodeproj: "Cashdoc.xcodeproj")
+    version_number = get_version_number(xcodeproj: "Cashdoc.xcodeproj", target: "Cashdoc")
+    complete_version_number = version_string(version_number, build_number)
+
+    commit_version_bump message: "Bump version to #{complete_version_number}"
+  end
+
+  lane :test_flight do
+    clear_derived_data
+    clean_cocoapods_cache
+
+    build_app(workspace: "Cashdoc.xcworkspace",
+              scheme: "Cashdoc",
+              configuration: "Release",
+              clean: true)
+
+    pilot(skip_waiting_for_build_processing: true)
+
+    upload_symbols_to_crashlytics(
+      gsp_path: "./Cashdoc/GoogleService-Info.plist"
+    )
+
+    on_success("TestFlight", "Release")
+  end
+
+  lane :fabric do
+    clear_derived_data
+    clean_cocoapods_cache
+
+    build_app(workspace: "Cashdoc.xcworkspace",
+              scheme: "Cashdoc",
+              configuration: "Inhouse",
+              clean: true,
+              export_options: {
+                method: "ad-hoc",
+                provisioningProfiles: {
+                  "com.cashwalk.cashdoc" => "Cashdoc_AdHoc"
+                }
+              })
+
+    crashlytics(
+      api_token: ENV["CRASHLYTICS_API_TOKEN"],
+      build_secret: ENV["CRASHLYTICS_BUILD_SECRET"],
+      groups: ['cashdoc-ios'],
+      notifications: true)
+
+    on_success("Fabric", "Inhouse")
+  end
+
+  lane :firebase do
+    clear_derived_data
+    clean_cocoapods_cache
+
+    build_app(workspace: "Cashdoc.xcworkspace",
+              scheme: "Cashdoc",
+              configuration: "Inhouse",
+              clean: true,
+              export_options: {
+                method: "ad-hoc",
+                provisioningProfiles: {
+                  "com.cashwalk.cashdoc" => "Cashdoc_AdHoc"
+                }
+              })
+
+    firebase_app_distribution(
+      app: "1:887377991460:ios:0208cfdcaab1ed3f",
+      groups: "Cashdoc",
+      firebase_cli_path: "/usr/local/bin/firebase"
+    )
+
+    on_success("Firebase", "Inhouse")
+  end	
+end
+
+def on_success(beta_service, build_configuration)
+    build_number = get_build_number(xcodeproj: "Cashdoc.xcodeproj")
+    version_number = get_version_number(xcodeproj: "Cashdoc.xcodeproj", target: "Cashdoc")
+    complete_version_number = version_string(version_number, build_number)
+
+    slack(
+      success: true,
+      slack_url: ENV["CASHDOC_SLACK"],
+      default_payloads: [:git_branch, :last_git_commit_message],
+      attachment_properties: {
+        fields: [
+          {
+            title: "Build Number",
+            value: complete_version_number,
+          },
+          {
+            title: "Beta Service",
+            value: beta_service
+          },
+          {
+            title: "Build Configuration",
+            value: build_configuration
+          }
+        ]
+      }
+    )
+end
+
+def version_string(version_number, build_number)
+    "iOS #{version_number} (#{build_number})"
+end

@@ -1,0 +1,26 @@
+cd ../..
+
+export LANG=en_US.UTF-8
+pod update
+
+rm -rf Carthage
+rm -rf ~/Library/Caches/org.carthage.CarthageKit
+
+set -euo pipefail
+
+xcconfig=$(mktemp /tmp/static.xcconfig.XXXXXX)
+trap 'rm -f "$xcconfig"' INT TERM HUP EXIT
+
+# For Xcode 12 make sure EXCLUDED_ARCHS is set to arm architectures otherwise
+# the build will fail on lipo due to duplicate architectures.
+echo 'EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_simulator__NATIVE_ARCH_64_BIT_x86_64__XCODE_1200 = arm64 arm64e armv7 armv7s armv6 armv8' >> $xcconfig
+echo 'EXCLUDED_ARCHS = $(inherited) $(EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_$(EFFECTIVE_PLATFORM_SUFFIX)__NATIVE_ARCH_64_BIT_$(NATIVE_ARCH_64_BIT)__XCODE_$(XCODE_VERSION_MAJOR))' >> $xcconfig
+
+export XCODE_XCCONFIG_FILE="$xcconfig"
+carthage update --platform iOS --no-use-binaries --new-resolver
+
+cd scripts
+cd dependency
+ruby carthage_build_setup.rb
+
+rm -rf ~/Library/Developer/Xcode/DerivedData/*

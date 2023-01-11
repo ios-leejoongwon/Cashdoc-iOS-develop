@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lotto Tutorial01VC-->
+        <scene sceneID="wdH-UH-0w5">
+            <objects>
+                <viewController storyboardIdentifier="LottoTutorial01VC" id="QGi-jt-cHb" customClass="LottoTutorial01VC" customModule="Cashdoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0MK-z9-JvW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WF4-YG-au7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="캐시닥 캐시로또 서비스를 알려드릴게요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIO-Vc-ywy">
+                                <rect key="frame" x="126.5" y="180" width="161" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="캐시로또는 로또기계를 누르시면 받으실 수 있어요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8y-1t-pSA">
+                                <rect key="frame" x="106.5" y="234.5" width="201.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnk-5g-LHR">
+                                <rect key="frame" x="342" y="144" width="60" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="6kT-mN-vMJ"/>
+                                    <constraint firstAttribute="width" constant="60" id="h32-dp-OrS"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPa-jD-UYv">
+                                <rect key="frame" x="0.0" y="94" width="47" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Ju5-Jw-CEN"/>
+                                    <constraint firstAttribute="width" constant="47" id="STf-0R-vgR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="skip"/>
+                                <connections>
+                                    <action selector="skipAct" destination="QGi-jt-cHb" eventType="touchUpInside" id="ohv-dU-1s2"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25q-i7-maR">
+                                <rect key="frame" x="342" y="144" width="60" height="111"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dE5-oR-kW3">
+                                <rect key="frame" x="380" y="174" width="22" height="23"/>
+                                <color key="backgroundColor" red="1" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="7b0-vM-ASh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="IBcornerRadius">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCashLottoTutorial01" translatesAutoresizingMaskIntoConstraints="NO" id="dUV-uJ-kzK">
+                                <rect key="frame" x="92" y="283" width="230" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="Y74-OT-Ecg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bws-nV-Hgf">
+                                <rect key="frame" x="155" y="776" width="104" height="36"/>
+                                <color key="backgroundColor" name="yellowCw"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Apt-dq-MmD"/>
+                                    <constraint firstAttribute="width" constant="104" id="BvN-Qe-oxM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="75" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="다음" image="icArrow01StyleRightBlack">
+                                    <color key="titleColor" name="blackCw"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBselectBGcolor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="IBcornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickTrasure:" destination="QGi-jt-cHb" eventType="touchUpInside" id="boC-Ui-E0W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ymf-yW-umX"/>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WF4-YG-au7" firstAttribute="bottom" secondItem="Bws-nV-Hgf" secondAttribute="bottom" constant="50" id="3ji-QT-Mpl"/>
+                            <constraint firstItem="hIO-Vc-ywy" firstAttribute="top" secondItem="25q-i7-maR" secondAttribute="top" constant="36" id="7ER-tU-Eat"/>
+                            <constraint firstItem="25q-i7-maR" firstAttribute="top" secondItem="dnk-5g-LHR" secondAttribute="top" id="B9p-79-H2o"/>
+                            <constraint firstItem="WF4-YG-au7" firstAttribute="top" secondItem="Ymf-yW-umX" secondAttribute="top" id="EgY-Ba-jpn"/>
+                            <constraint firstItem="hIO-Vc-ywy" firstAttribute="centerX" secondItem="Ymf-yW-umX" secondAttribute="centerX" id="HAU-Ao-y0a"/>
+                            <constraint firstItem="25q-i7-maR" firstAttribute="leading" secondItem="dnk-5g-LHR" secondAttribute="leading" id="NEP-Gm-qhs"/>
+                            <constraint firstItem="dE5-oR-kW3" firstAttribute="trailing" secondItem="dnk-5g-LHR" secondAttribute="trailing" id="O75-Xu-mCg"/>
+                            <constraint firstItem="WF4-YG-au7" firstAttribute="leading" secondItem="Ymf-yW-umX" secondAttribute="leading" id="PfH-Z3-Z9W"/>
+                            <constraint firstItem="Ymf-yW-umX" firstAttribute="trailing" secondItem="dnk-5g-LHR" secondAttribute="trailing" constant="12" id="SPQ-kW-oZX"/>
+                            <constraint firstItem="jPa-jD-UYv" firstAttribute="top" secondItem="WF4-YG-au7" secondAttribute="top" constant="50" id="V2Q-6C-am7"/>
+                            <constraint firstItem="G8y-1t-pSA" firstAttribute="centerX" secondItem="Ymf-yW-umX" secondAttribute="centerX" id="YGd-vt-9PK"/>
+                            <constraint firstItem="jPa-jD-UYv" firstAttribute="leading" secondItem="Ymf-yW-umX" secondAttribute="leading" id="Yh7-fi-Zy8"/>
+                            <constraint firstItem="25q-i7-maR" firstAttribute="bottom" secondItem="dnk-5g-LHR" secondAttribute="bottom" id="e9l-BP-qTF"/>
+                            <constraint firstItem="dUV-uJ-kzK" firstAttribute="top" secondItem="G8y-1t-pSA" secondAttribute="bottom" constant="10" id="eSe-l8-az5"/>
+                            <constraint firstItem="25q-i7-maR" firstAttribute="trailing" secondItem="dnk-5g-LHR" secondAttribute="trailing" id="fEG-tI-PJJ"/>
+                            <constraint firstItem="Ymf-yW-umX" firstAttribute="trailing" secondItem="WF4-YG-au7" secondAttribute="trailing" id="hTD-5N-clq"/>
+                            <constraint firstItem="dE5-oR-kW3" firstAttribute="top" secondItem="dnk-5g-LHR" secondAttribute="top" constant="30" id="mFL-Dl-43G"/>
+                            <constraint firstItem="G8y-1t-pSA" firstAttribute="top" secondItem="hIO-Vc-ywy" secondAttribute="bottom" constant="16" id="oLd-IL-fJh"/>
+                            <constraint firstItem="Bws-nV-Hgf" firstAttribute="centerX" secondItem="Ymf-yW-umX" secondAttribute="centerX" id="pzf-IO-xL5"/>
+                            <constraint firstItem="dnk-5g-LHR" firstAttribute="top" secondItem="WF4-YG-au7" secondAttribute="top" constant="100" id="val-3V-n3M"/>
+                            <constraint firstItem="dUV-uJ-kzK" firstAttribute="centerX" secondItem="G8y-1t-pSA" secondAttribute="centerX" id="xZ3-8U-Kcg"/>
+                            <constraint firstItem="WF4-YG-au7" firstAttribute="bottom" secondItem="Ymf-yW-umX" secondAttribute="bottom" id="yS8-QN-aLZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lottoMachinButton" destination="25q-i7-maR" id="2sV-pd-ybc"/>
+                        <outlet property="skipButton" destination="jPa-jD-UYv" id="MhP-or-td7"/>
+                        <outlet property="treasureBox" destination="dnk-5g-LHR" id="7uf-l7-PAm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Scn-PT-g6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="31.473214285714285"/>
+        </scene>
+        <!--Lotto PopupVC-->
+        <scene sceneID="djH-sD-hnb">
+            <objects>
+                <viewController storyboardIdentifier="LottoPopupVC" id="H7c-hj-YOO" customClass="LottoPopupVC" customModule="Cashdoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nr6-nI-LXI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="r8a-Bk-y54">
+                                <rect key="frame" x="0.0" y="815" width="414" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sld-Zr-rrq">
+                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="47"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="내 캐시로또 모두 보기">
+                                            <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showMyLotto" destination="H7c-hj-YOO" eventType="touchUpInside" id="Ens-ad-S4L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmI-Dn-Rok">
+                                        <rect key="frame" x="207.5" y="0.0" width="206.5" height="47"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="닫기">
+                                            <color key="titleColor" red="0.20784313725490194" green="0.5607843137254902" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeAct" destination="H7c-hj-YOO" eventType="touchUpInside" id="NCE-bl-s4M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="ice-5R-rVk"/>
+                                </constraints>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAF-Kr-Ygj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="815"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwA-A7-rP7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="815"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLottoBg2" translatesAutoresizingMaskIntoConstraints="NO" id="wzQ-do-ySN">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="815"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLottoText1" translatesAutoresizingMaskIntoConstraints="NO" id="RoR-06-yP5">
+                                                <rect key="frame" x="45" y="100" width="324" height="65"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvp-32-hwC">
+                                                <rect key="frame" x="0.0" y="213" width="414" height="173"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="D9l-gS-vkN">
+                                                        <rect key="frame" x="59" y="47" width="296" height="45"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clG-iz-FBO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="46" height="45"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="46" id="L5d-DP-Mbv"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyZ-jr-LTh">
+                                                                <rect key="frame" x="50" y="0.0" width="46" height="45"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="46" id="AYl-wx-IB3"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRw-UT-0TC">
+                                                                <rect key="frame" x="100" y="0.0" width="46" height="45"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="46" id="dbO-ik-5fk"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0v-VM-2fx">
+                                                                <rect key="frame" x="150" y="0.0" width="46" height="45"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="46" id="q0G-yU-aj3"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTI-a7-KeS">
+                                                                <rect key="frame" x="200" y="0.0" width="46" height="45"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="46" id="J3i-I8-v7z"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcZ-Pp-Bnf">
+                                                                <rect key="frame" x="250" y="0.0" width="46" height="45"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="46" id="KhS-y0-DYW"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="EFE-Oe-peG"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qLW-Wf-TNS">
+                                                        <rect key="frame" x="157" y="5" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="ASU-Pf-R88"/>
+                                                            <constraint firstAttribute="height" constant="100" id="wja-yH-jNJ"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="D9l-gS-vkN" firstAttribute="centerX" secondItem="Jvp-32-hwC" secondAttribute="centerX" id="CnN-eX-aGv"/>
+                                                    <constraint firstItem="qLW-Wf-TNS" firstAttribute="centerX" secondItem="Jvp-32-hwC" secondAttribute="centerX" id="HHQ-yp-OgU"/>
+                                                    <constraint firstItem="D9l-gS-vkN" firstAttribute="top" secondItem="Jvp-32-hwC" secondAttribute="top" constant="47" id="HZt-dJ-UwD"/>
+                                                    <constraint firstAttribute="height" constant="173" id="L7c-Jt-Dmt"/>
+                                                    <constraint firstItem="qLW-Wf-TNS" firstAttribute="top" secondItem="Jvp-32-hwC" secondAttribute="top" constant="5" id="ak3-Cj-unO"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="IBcornerRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="954회 캐시로또가 발급되었어요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38m-sV-MIe">
+                                                <rect key="frame" x="81" y="198" width="252" height="30"/>
+                                                <color key="backgroundColor" name="yellowCw"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="59G-c9-B7W"/>
+                                                    <constraint firstAttribute="width" constant="252" id="ASG-cf-l9u"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="IBcornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TI-0w-fuV">
+                                                <rect key="frame" x="106" y="337.5" width="202" height="33.5"/>
+                                                <string key="text">보유한 캐시로또 659장으로
+1등 1천만 캐시의 행운을 기대하세요!</string>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="IBLineHeight">
+                                                        <real key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLottoText2" translatesAutoresizingMaskIntoConstraints="NO" id="tuF-aE-ZGR">
+                                                <rect key="frame" x="108.5" y="426" width="197" height="45"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUY-Ku-7FV">
+                                                <rect key="frame" x="31" y="515" width="352" height="68"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z94-r8-gma">
+                                                        <rect key="frame" x="113" y="17.5" width="206" height="33.5"/>
+                                                        <string key="text">954회 당첨자 발표는 월요일 
+오전 12시30분에 진행될 예정입니다.</string>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.86274509803921573" green="0.89803921568627454" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="z94-r8-gma" firstAttribute="centerX" secondItem="cUY-Ku-7FV" secondAttribute="centerX" constant="40" id="0FF-tR-Ga2"/>
+                                                    <constraint firstAttribute="height" constant="68" id="Gem-0n-FmR"/>
+                                                    <constraint firstItem="z94-r8-gma" firstAttribute="centerY" secondItem="cUY-Ku-7FV" secondAttribute="centerY" id="Jec-Kx-t8G"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="IBcornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLottoBox" translatesAutoresizingMaskIntoConstraints="NO" id="3lz-mf-DaF">
+                                                <rect key="frame" x="31" y="510" width="99" height="63"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3lz-mf-DaF" firstAttribute="top" secondItem="cUY-Ku-7FV" secondAttribute="top" constant="-5" id="0hp-T4-Fe7"/>
+                                            <constraint firstItem="4TI-0w-fuV" firstAttribute="bottom" secondItem="Jvp-32-hwC" secondAttribute="bottom" constant="-15" id="2V7-of-Uk3"/>
+                                            <constraint firstItem="cUY-Ku-7FV" firstAttribute="top" secondItem="tuF-aE-ZGR" secondAttribute="bottom" constant="44" id="4n2-dI-PAL"/>
+                                            <constraint firstItem="tuF-aE-ZGR" firstAttribute="top" secondItem="Jvp-32-hwC" secondAttribute="bottom" constant="40" id="8Zi-dS-3vE"/>
+                                            <constraint firstItem="Jvp-32-hwC" firstAttribute="top" secondItem="RoR-06-yP5" secondAttribute="bottom" constant="48" id="9CT-ZZ-er1"/>
+                                            <constraint firstItem="tuF-aE-ZGR" firstAttribute="centerX" secondItem="qwA-A7-rP7" secondAttribute="centerX" id="EAZ-1H-NZb"/>
+                                            <constraint firstItem="RoR-06-yP5" firstAttribute="top" secondItem="qwA-A7-rP7" secondAttribute="top" constant="100" id="IzG-NR-3Hc"/>
+                                            <constraint firstItem="38m-sV-MIe" firstAttribute="top" secondItem="Jvp-32-hwC" secondAttribute="top" constant="-15" id="Khe-Db-v5L"/>
+                                            <constraint firstItem="wzQ-do-ySN" firstAttribute="leading" secondItem="qwA-A7-rP7" secondAttribute="leading" id="OTl-2G-SRc"/>
+                                            <constraint firstItem="cUY-Ku-7FV" firstAttribute="leading" secondItem="qwA-A7-rP7" secondAttribute="leading" constant="31" id="Q79-RL-d00"/>
+                                            <constraint firstItem="4TI-0w-fuV" firstAttribute="centerX" secondItem="qwA-A7-rP7" secondAttribute="centerX" id="Qix-Bk-YM0"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jvp-32-hwC" secondAttribute="trailing" id="SAs-H1-ujC"/>
+                                            <constraint firstItem="Jvp-32-hwC" firstAttribute="leading" secondItem="qwA-A7-rP7" secondAttribute="leading" id="V6y-zJ-Aqo"/>
+                                            <constraint firstItem="38m-sV-MIe" firstAttribute="centerX" secondItem="Jvp-32-hwC" secondAttribute="centerX" id="ZgZ-r4-Bgm"/>
+                                            <constraint firstItem="wzQ-do-ySN" firstAttribute="top" secondItem="qwA-A7-rP7" secondAttribute="top" id="cs7-1B-dMQ"/>
+                                            <constraint firstItem="RoR-06-yP5" firstAttribute="centerX" secondItem="qwA-A7-rP7" secondAttribute="centerX" id="dHK-qb-D5q"/>
+                                            <constraint firstAttribute="trailing" secondItem="cUY-Ku-7FV" secondAttribute="trailing" constant="31" id="fHU-mO-F8o"/>
+                                            <constraint firstAttribute="height" constant="815" id="fww-oL-hQ5"/>
+                                            <constraint firstAttribute="bottom" secondItem="wzQ-do-ySN" secondAttribute="bottom" id="ljI-08-L2C"/>
+                                            <constraint firstItem="3lz-mf-DaF" firstAttribute="leading" secondItem="cUY-Ku-7FV" secondAttribute="leading" id="sFu-E8-Hyc"/>
+                                            <constraint firstAttribute="trailing" secondItem="wzQ-do-ySN" secondAttribute="trailing" id="wod-Ly-MwE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qwA-A7-rP7" firstAttribute="width" secondItem="HAF-Kr-Ygj" secondAttribute="width" id="GNm-zW-4lx"/>
+                                    <constraint firstAttribute="bottom" secondItem="qwA-A7-rP7" secondAttribute="bottom" id="dtT-4L-dTd"/>
+                                    <constraint firstItem="qwA-A7-rP7" firstAttribute="leading" secondItem="HAF-Kr-Ygj" secondAttribute="leading" id="nwc-9E-amh"/>
+                                    <constraint firstItem="qwA-A7-rP7" firstAttribute="top" secondItem="HAF-Kr-Ygj" secondAttribute="top" id="voy-nr-jhd"/>
+                                    <constraint firstAttribute="trailing" secondItem="qwA-A7-rP7" secondAttribute="trailing" id="x3u-JM-QNC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V2f-bv-2XQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V2f-bv-2XQ" firstAttribute="trailing" secondItem="HAF-Kr-Ygj" secondAttribute="trailing" id="21I-uj-TiO"/>
+                            <constraint firstItem="HAF-Kr-Ygj" firstAttribute="top" secondItem="Nr6-nI-LXI" secondAttribute="top" id="2vV-ET-NjG"/>
+                            <constraint firstItem="V2f-bv-2XQ" firstAttribute="bottom" secondItem="r8a-Bk-y54" secondAttribute="bottom" id="3Ga-mp-n2Q"/>
+                            <constraint firstItem="V2f-bv-2XQ" firstAttribute="trailing" secondItem="r8a-Bk-y54" secondAttribute="trailing" id="OYb-tf-fLO"/>
+                            <constraint firstItem="r8a-Bk-y54" firstAttribute="leading" secondItem="V2f-bv-2XQ" secondAttribute="leading" id="R34-Fg-BTP"/>
+                            <constraint firstItem="HAF-Kr-Ygj" firstAttribute="leading" secondItem="V2f-bv-2XQ" secondAttribute="leading" id="g87-fC-RyF"/>
+                            <constraint firstItem="r8a-Bk-y54" firstAttribute="top" secondItem="HAF-Kr-Ygj" secondAttribute="bottom" id="ifP-Cb-cTu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lottoBallView01" destination="clG-iz-FBO" id="jEf-rC-rhM"/>
+                        <outlet property="lottoBallView02" destination="fyZ-jr-LTh" id="dTw-rs-eZF"/>
+                        <outlet property="lottoBallView03" destination="gRw-UT-0TC" id="ETO-O7-cYv"/>
+                        <outlet property="lottoBallView04" destination="i0v-VM-2fx" id="rVy-xj-Ebe"/>
+                        <outlet property="lottoBallView05" destination="eTI-a7-KeS" id="uv9-Yf-UvU"/>
+                        <outlet property="lottoBallView06" destination="FcZ-Pp-Bnf" id="obI-vT-PG0"/>
+                        <outlet property="lottoFailImageView" destination="qLW-Wf-TNS" id="QGP-7S-vVW"/>
+                        <outlet property="lottoHaveLabel" destination="4TI-0w-fuV" id="nnk-W8-oW1"/>
+                        <outlet property="lottoNextLabel" destination="z94-r8-gma" id="ggp-9K-qlG"/>
+                        <outlet property="lottoTitleLabel" destination="38m-sV-MIe" id="FwR-YP-xME"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nmr-fS-94h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125" y="765"/>
+        </scene>
+        <!--Lotto Tutorial02VC-->
+        <scene sceneID="8Y6-72-301">
+            <objects>
+                <viewController storyboardIdentifier="LottoTutorial02VC" id="gQp-IE-Z3H" customClass="LottoTutorial02VC" customModule="Cashdoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hvV-aL-HLl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLottotutorial01" translatesAutoresizingMaskIntoConstraints="NO" id="GOn-Z3-VGj">
+                                <rect key="frame" x="45" y="355" width="324" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로또기계를 누르면 6개의 캐시로또 행운 번호가 자동으로 발급돼요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWq-qP-R6A">
+                                <rect key="frame" x="119.5" y="154" width="175" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="캐시로또 당첨 번호는 매주 토요일 방송되는 실제 로또의 당첨번호와 동일해요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAO-pL-dhM">
+                                <rect key="frame" x="73" y="225.5" width="268.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucq-Wk-7Le">
+                                <rect key="frame" x="155" y="771" width="104" height="36"/>
+                                <color key="backgroundColor" name="yellowCw"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="fe7-rF-Pkd"/>
+                                    <constraint firstAttribute="height" constant="36" id="rY5-IF-rJb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="23" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="75" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="다음" image="icArrow01StyleRightBlack">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="IBcornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextAct" destination="gQp-IE-Z3H" eventType="touchUpInside" id="25w-in-sLD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3wA-S7-y3E"/>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QAO-pL-dhM" firstAttribute="centerX" secondItem="3wA-S7-y3E" secondAttribute="centerX" id="Hyd-5J-SUD"/>
+                            <constraint firstItem="Ucq-Wk-7Le" firstAttribute="centerX" secondItem="3wA-S7-y3E" secondAttribute="centerX" id="J0I-kn-ITy"/>
+                            <constraint firstItem="QAO-pL-dhM" firstAttribute="top" secondItem="XWq-qP-R6A" secondAttribute="bottom" constant="14" id="MAn-gH-EMY"/>
+                            <constraint firstItem="XWq-qP-R6A" firstAttribute="centerX" secondItem="3wA-S7-y3E" secondAttribute="centerX" id="R2A-9k-DtS"/>
+                            <constraint firstItem="GOn-Z3-VGj" firstAttribute="centerX" secondItem="3wA-S7-y3E" secondAttribute="centerX" id="TwX-5Z-CZg"/>
+                            <constraint firstItem="3wA-S7-y3E" firstAttribute="bottom" secondItem="Ucq-Wk-7Le" secondAttribute="bottom" constant="55" id="U14-mV-INr"/>
+                            <constraint firstItem="GOn-Z3-VGj" firstAttribute="top" secondItem="QAO-pL-dhM" secondAttribute="bottom" constant="91" id="dAx-jV-Xbe"/>
+                            <constraint firstItem="XWq-qP-R6A" firstAttribute="top" secondItem="3wA-S7-y3E" secondAttribute="top" constant="110" id="siq-Ix-A1O"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zo-Nf-NWY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="31"/>
+        </scene>
+        <!--Lotto Tutorial03VC-->
+        <scene sceneID="8aC-w4-kt2">
+            <objects>
+                <viewController storyboardIdentifier="LottoTutorial03VC" id="gPf-xY-mvM" customClass="LottoTutorial03VC" customModule="Cashdoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MR6-ut-XWE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zs9-d7-JpJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-zT-kkN">
+                                <rect key="frame" x="155" y="776" width="104" height="36"/>
+                                <color key="backgroundColor" name="yellowCw"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="9zt-Y8-VtR"/>
+                                    <constraint firstAttribute="height" constant="36" id="sNd-i9-sN4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="23" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="75" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="시작하기" image="icArrow01StyleRightBlack">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="IBcornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextAct" destination="gPf-xY-mvM" eventType="touchUpInside" id="hV3-uq-MeB"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLottotutorial03" translatesAutoresizingMaskIntoConstraints="NO" id="P1j-c9-1Yn">
+                                <rect key="frame" x="59.5" y="364" width="295" height="250"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SgT-hA-g6Z"/>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zs9-d7-JpJ" firstAttribute="top" secondItem="SgT-hA-g6Z" secondAttribute="top" id="9Wc-fF-ETo"/>
+                            <constraint firstItem="Zs9-d7-JpJ" firstAttribute="trailing" secondItem="SgT-hA-g6Z" secondAttribute="trailing" id="Bkk-l6-h3i"/>
+                            <constraint firstItem="Zs9-d7-JpJ" firstAttribute="bottom" secondItem="SgT-hA-g6Z" secondAttribute="bottom" id="HhH-3y-4u6"/>
+                            <constraint firstItem="Zs9-d7-JpJ" firstAttribute="bottom" secondItem="Owz-zT-kkN" secondAttribute="bottom" constant="50" id="Qbh-vZ-oup"/>
+                            <constraint firstItem="P1j-c9-1Yn" firstAttribute="top" secondItem="SgT-hA-g6Z" secondAttribute="top" constant="320" id="SBJ-S5-ck5"/>
+                            <constraint firstItem="P1j-c9-1Yn" firstAttribute="centerX" secondItem="SgT-hA-g6Z" secondAttribute="centerX" id="d6z-nC-6ik"/>
+                            <constraint firstItem="Owz-zT-kkN" firstAttribute="centerX" secondItem="SgT-hA-g6Z" secondAttribute="centerX" id="drS-MS-jaa"/>
+                            <constraint firstItem="Zs9-d7-JpJ" firstAttribute="leading" secondItem="SgT-hA-g6Z" secondAttribute="leading" id="uoB-dW-XbJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MbQ-wH-g6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720" y="31"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icArrow01StyleRightBlack" width="16" height="16"/>
+        <image name="imgCashLottoTutorial01" width="230" height="230"/>
+        <image name="imgLottoBg2" width="375" height="667"/>
+        <image name="imgLottoBox" width="99" height="63"/>
+        <image name="imgLottoText1" width="324" height="65"/>
+        <image name="imgLottoText2" width="197" height="45"/>
+        <image name="imgLottotutorial01" width="324" height="80"/>
+        <image name="imgLottotutorial03" width="295" height="250"/>
+        <namedColor name="blackCw">
+            <color red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellowCw">
+            <color red="1" green="0.82352941176470584" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,30 @@
+//
+//  CheckUpRealmManager.swift
+//  Cashdoc
+//
+//  Created by  주완 김 on 2020/05/18.
+//  Copyright © 2020 Cashwalk. All rights reserved.
+//
+
+import RealmSwift
+
+final class CheckUpRealmManager: RealmManageable {
+    var isUseInMemory: Bool {
+        return false
+    }
+    
+    var schemaVersion: UInt64 {
+        return 1
+    }
+    
+    var fileName: String {
+        return "checkup"
+    }
+    
+    var objectTypes: [Object.Type]? {
+        return [CheckupIncomeModel.self,
+                CheckupReferceListModel.self,
+                CheckupListModel.self
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+framework module SmartAIB {
+    umbrella header "SmartAIBSDK.h"
+
+    export *
+    module * { export * }
+}
