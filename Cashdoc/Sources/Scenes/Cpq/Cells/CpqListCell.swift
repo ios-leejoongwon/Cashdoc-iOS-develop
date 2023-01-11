@@ -31,7 +31,7 @@ class CpqListCell: UITableViewCell {
                 if cpqListtModel.lock == 0 {
                     liveQuizImageView.isHidden = false
                     let commaPoint = point.withComma
-                    pointLabel.text = "\(commaPoint)캐시 남음"
+                    pointLabel.text = "\(commaPoint)포인트 남음" //캐시 -> 포인트
                     pointLabel.textColor = .blackCw
                     titleLabel.textColor = .blackCw
                     titleLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
@@ -76,7 +76,7 @@ class CpqListCell: UITableViewCell {
     }
     private let coinImageView = UIImageView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(named: "icSpendYellow")
+        $0.image = UIImage(named: "icDpointNavy") //캐시 이미지 -> 포인트 이미지
     }
     private let pointLabel = UILabel().then {
         $0.translatesAutoresizingMaskIntoConstraints = false

@@ -36,7 +36,7 @@ class QuizAnswerPopupView: BasePopupView {
     
     private let adCashboxImageView = UIImageView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(named: "07ImgAdCashbox")
+        $0.image = UIImage(named: "imgDpointbox")
     }
     
     private let titleLabel = UILabel().then {
@@ -50,7 +50,7 @@ class QuizAnswerPopupView: BasePopupView {
     
     private let cashBrownImageView = UIImageView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(named: "IcQuizCashBrown")
+        $0.image = UIImage(named: "icDpointNavy")
     }
     
     let numberBackgroundLabel = UILabel().then {
@@ -81,7 +81,7 @@ class QuizAnswerPopupView: BasePopupView {
         $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         $0.textColor = .brownishGrayCw
         $0.textAlignment = .center
-        $0.text = "당첨된 캐시가 지급되었습니다."
+        $0.text = "당첨된 포인트가 지급되었습니다."
     }
     
     private let horizontalLine = UILabel().then {
@@ -91,8 +91,8 @@ class QuizAnswerPopupView: BasePopupView {
     
     private let closeButton = UIButton().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("닫기", for: .normal)
-        $0.setTitleColor(.blackTwoCw, for: .normal)
+        $0.setTitle("확인", for: .normal)
+        $0.setTitleColor(.blackTwoCw, for: .normal) //컬러 질문!!
         $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .regular)
         $0.backgroundColor = .white
     }

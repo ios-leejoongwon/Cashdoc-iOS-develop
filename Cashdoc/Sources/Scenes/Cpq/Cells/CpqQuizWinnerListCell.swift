@@ -28,7 +28,7 @@ class CpqQuizWinnerListCell: UITableViewCell {
             }
             if let point = cpqWinnerModel.point {
                 let commaPoint = point.withComma
-                pointLabel.text = "\(commaPoint)캐시"
+                pointLabel.text = "\(commaPoint)포인트" //캐시 -> 포인트
             }
         }
     }
@@ -51,7 +51,7 @@ class CpqQuizWinnerListCell: UITableViewCell {
     }
     private let cashYellowImageView = UIImageView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(named: "icSpendYellow")
+        $0.image = UIImage(named: "icDpointNavy") //캐시 이미지 -> 포인트 이미지
     }
     private let pointLabel = UILabel().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -119,7 +119,7 @@ extension CpqQuizWinnerListCell {
         pointLabel.leadingAnchor.constraint(equalTo: cashYellowImageView.trailingAnchor, constant: 4).isActive = true
         pointLabel.centerYAnchor.constraint(equalTo: profileUrlImageView.centerYAnchor).isActive = true
         pointLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
-        pointLabel.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        pointLabel.widthAnchor.constraint(equalToConstant: 85).isActive = true
         pointLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
 }

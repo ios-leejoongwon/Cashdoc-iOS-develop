@@ -163,7 +163,7 @@ class BirthDatePopupView: CashdocViewController {
         
         titleLabel = UILabel().then {
             $0.textAlignment = .center
-            $0.text = "용돈퀴즈 풀고\n캐시 받아가세요!😊"
+            $0.text = "용돈퀴즈 풀고\n포인트 받아가세요!😊" //캐시 -> 포인트
             $0.numberOfLines = 2
             $0.setFontToMedium(ofSize: 24)
             $0.textColor = UIColor.blackCw

@@ -283,7 +283,7 @@ class MainSegViewController: CashdocViewController {
                 guard let self = self else { return }
                 if let getPoint = getUser.point {
                     //공백: 7스페이스바
-                    self.currentCashLabel.text = "       \(getPoint.commaValue)       "
+                    self.currentCashLabel.text = "       \(getPoint.commaValue)   "
                 }
                 self.detectNotification()
             })
